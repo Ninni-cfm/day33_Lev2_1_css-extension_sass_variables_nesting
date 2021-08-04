@@ -1,0 +1,20 @@
+body {
+  height: 100vh;
+  background: linear-gradient(60deg, #5bf2fd 0% 11%, #fcc736 11% 22%, #fd5f5f 22% 33%, #bb4dfa 33% 44%, #5bf2fd 44% 56%, #fcc736 56% 67%, #fd5f5f 67% 78%, #bb4dfa 78% 89%, #5bf2fd 89% 100%);
+}
+
+h1,
+h2,
+h3 {
+  color: white;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+}
+footer ul a {
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
