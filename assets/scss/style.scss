@@ -1,12 +1,22 @@
+//****************************************************************************
+// Variables
 $col1: #5bf2fd;
 $col2: #fcc736;
 $col3: #fd5f5f;
 $col4: #bb4dfa;
 
 $mainCol: white;
-$headFootCol: black;
+$colorHeaderFooter: black;
+$circle: 10rem;
 
-body {
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+section {
     height: 100vh;
     background: linear-gradient(
         60deg,
@@ -20,21 +30,63 @@ body {
         $col4 78% 89%,
         $col1 89% 100%
     );
-}
 
-h1,
-h2,
-h3 {
-    color: $mainCol;
-}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-footer {
-    ul {
-        display: flex;
-        list-style: none;
+    header {
+        padding: 20px 50px;
+        font-size: 1.5em;
+        font-weight: 900;
+    }
 
-        a {
-            color: $headFootCol;
+    main {
+        align-self: center;
+        text-align: center;
+        color: $mainCol;
+
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+
+        h1 {
+            font-size: 10rem;
+        }
+        h3 {
+            font-size: 3rem;
+        }
+
+        .circle {
+            justify-self: end;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: $circle;
+            height: $circle;
+            border-radius: $circle;
+            background: $col2;
+            transform: translate(75%, 50%);
+        }
+        h2 {
+            font-size: 6rem;
+        }
+    }
+
+    footer {
+        @extend header;
+
+        justify-self: end;
+        align-self: end;
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            a {
+                color: $colorHeaderFooter;
+                margin-right: 20px;
+            }
         }
     }
 }
